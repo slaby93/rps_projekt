@@ -1,0 +1,79 @@
+<div id="fullpage">
+    <!--ZESPOL-->
+    <div class="section teamSection" layout="column">
+        <div layout="column" layout-align="center center">
+            <h2 class="mainWorkTitle">
+                RACHUNEK PRAWDOPODOBIENSTWA I STATYSTYKA
+            </h2>
+            <div layout="row" layout-align="center">
+                <h4 class="mainWorkTitle">PROJEKT ZALICZENIOWY</h4>
+            </div>
+            <div layout="row" layout-align="center">
+                <h4 class="mainWorkTitle">1 maja 2016</h4>
+            </div>
+        </div>
+        <div flex="grow" layout="row" layout-align="space-around center" class="teamMembersHolder">
+            <md-card ng-repeat="member in appCtrl.members">
+                <md-card-content>
+                    <div layout="column" class="member">
+                        <img ng-src="resources/{{member.pic}}">
+                        <div layout="row" layout-align="center">
+                            <span class="memberName">{{member.name}}</span>
+                        </div>
+
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+
+    <!--&lt;!&ndash;POZYSKANIE DANYCH&ndash;&gt;-->
+    <!--<div class="section">POZYSKANIE DANYCH</div>-->
+    <!--&lt;!&ndash;OPIS DANYCH&ndash;&gt;-->
+    <!--<div class="section">OPIS DANYCH</div>-->
+    <!--&lt;!&ndash;CZYSZCZENIE DANYCH&ndash;&gt;-->
+    <!--<div class="section">CZYSZCZENIE DANYCH</div>-->
+    <!--&lt;!&ndash;AGREGACJA I TRANSFORMACJA DANYCH&ndash;&gt;-->
+    <!--<div class="section">AGREGACJA I TRANSFORMACJA DANYCH</div>-->
+
+
+    <!--EKSPLORACJA DANYCH-->
+    <div class="section dataExploration">
+        <div layout="row">
+            <md-sidenav
+                    id="equationsNav"
+                    flex
+                    class="md-sidenav-left equationsNavBar"
+                    md-component-id="left"
+                    md-is-locked-open="true">
+                <md-toolbar class="md-theme-indigo">
+                    <h1 class="md-toolbar-tools">Nawigacja</h1>
+                </md-toolbar>
+                <md-content layout="column" layout-padding>
+                    <md-button ng-click="appCtrl.scrollUp()" class="md-raised">W gore</md-button>
+                    <md-list>
+                        <md-list-item layout="column" layout-align="center center" class="md-3-line clickable"
+                                      ng-repeat="option in appCtrl.options" ng-click="appCtrl.handleClick(option);">
+                            <md-card>
+                                <md-card-content>
+                                    <span>{{option.name}}</span>
+                                </md-card-content>
+                            </md-card>
+                        </md-list-item>
+                    </md-list>
+                    <md-button ng-click="appCtrl.scrollDown()" class="md-raised">W dol</md-button>
+                </md-content>
+            </md-sidenav>
+            <ui-view flex class="equationsContent"></ui-view>
+        </div>
+
+    </div>
+    <!--HIPOTEZY BADAWCZE-->
+    <div class="section">HIPOTEZY BADAWCZE</div>
+    <!--WERYFIKACJA HIPOTEZ-->
+    <div class="section">WERYFIKACJA HIPOTEZ</div>
+    <!--WNIOSKI-->
+    <div class="section">WNIOSKI</div>
+    <!--UWAGI-->
+    <div class="section">UWAGI</div>
+</div>

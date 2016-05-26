@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projekt Rachunek Prawdopodobienstwa 2016</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @if NODE_ENV='production' -->
+    <script src="build.js"></script>
+    <!-- @endif -->
+    <!-- @if NODE_ENV='development' -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('modules/mainApp/modulesInitialization'); // i to juz smiga
+    </script>
+    <script src="//localhost:1338/livereload.js"></script>
+    <!-- @endif -->
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="dist/output.css.map">
+
+    <!--<script type="text/javascript" async-->
+    <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">-->
+    <!--</script>-->
+    <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=configured&dummy=.js">
+    </script>
+
+
+</head>
+<body ng-app="mainApp">
+<loader></loader>
+<ui-view>
+</ui-view>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+node_modules
+public/jspm_packages
+equations/dates.json
+equations/test.json
+equations/users.json
+equations/parsed.json
+equations/log_phase8

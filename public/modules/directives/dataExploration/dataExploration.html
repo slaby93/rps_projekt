@@ -1,0 +1,13 @@
+<h1>DATA EXPLORATION</h1>
+<div ui-view="test"></div>
+<div layout="row" layout-align="center">
+    <md-list>
+        <md-list-item class="md-3-line" ng-repeat="option in exploreCtrl.options">
+            <md-card>
+                <md-card-content>
+                    <span>{{option.name}}</span>
+                </md-card-content>
+            </md-card>
+        </md-list-item>
+    </md-list>
+</div>
